@@ -32,6 +32,7 @@ export default async function Home() {
     <main className={`h-screen p-3 md:py-5 md:px-8
     flex flex-col justify-between`}>
       <Header />
+      <History />
       <Action words={words} patterns={patterns} />
       <Footer />
     </main>

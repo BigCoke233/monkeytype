@@ -14,7 +14,7 @@ body {
   font-family: 'Noto Sans SC', sans-serif;
 }
 
-body::before {
+.monkey {
   content: '';
   background-image: url('/monkey.svg');
   position: absolute;
@@ -25,7 +25,15 @@ body::before {
 }
 
 @media screen and (min-width: 768px) {
-  body::before {
+  .monkey {
     width: 30vw;
   }  
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444
 }
