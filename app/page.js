@@ -1,40 +1,40 @@
 /**
  * 用户界面
+ * ---------
+ * 
+ * 一些术语的说明：
+ * - phrase  词组
+ * - pattern 词组规则
+ * - word    词素
  * 
  * @returns jsx
  */
 
-import Image from "next/image"
+/* === 引入 === */
 
-import { Ubuntu } from 'next/font/google'
-import { IoSettings } from "react-icons/io5";
+//页面组成部分
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Action from '@/components/Action'
 
-import { Button, ButtonGroup } from "@nextui-org/react";
- 
-// If loading a variable font, you don't need to specify the font weight
-const font = Ubuntu({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '700',
-})
+//关键功能
+import { GetWords, GetPatterns } from '@/lib/FetchData'
 
-export default function Home() {
+/* === 主函数 === */
+
+export default async function Home() {
+
+  const words = await GetWords()
+  const patterns = await GetPatterns()
+
   return (
-    <main className="">
+    <main className={`h-screen p-3 md:py-5 md:px-8
+    flex flex-col justify-between`}>
 
-      <nav className="p-3 md:py-5 md:px-8 flex justify-between">
-        <header className="flex items-center gap-3">
-          <Image src="/favicon.png" alt="A monkey typist." width={96} height={96}
-            className="w-8 md:w-12 drop-shadow-md" />
-          <h1 className={`texl-xl md:text-3xl font-bold drop-shadow ${font.className}`}>
-            Monkeytype<span className="text-zinc-600">_</span>
-          </h1>
-        </header>
-        <section>
-          <Button isIconOnly variant="light" size="lg"><IoSettings /></Button>
-        </section>
-      </nav>
-
+      <Header />
+      <Action words={words} patterns={patterns} />
+      <Footer />
+      
     </main>
   )
 }
