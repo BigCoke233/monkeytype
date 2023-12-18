@@ -13,3 +13,19 @@
 body {
   font-family: 'Noto Sans SC', sans-serif;
 }
+
+body::before {
+  content: '';
+  background-image: url('/monkey.svg');
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80vw;
+  height: 60vh;
+}
+
+@media screen and (min-width: 768px) {
+  body::before {
+    width: 30vw;
+  }  
+}

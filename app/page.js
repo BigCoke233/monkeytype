@@ -16,6 +16,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Action from '@/components/Action'
+import History from '@/components/History'
 
 //关键功能
 import { GetWords, GetPatterns } from '@/lib/FetchData'
@@ -30,11 +31,9 @@ export default async function Home() {
   return (
     <main className={`h-screen p-3 md:py-5 md:px-8
     flex flex-col justify-between`}>
-
       <Header />
       <Action words={words} patterns={patterns} />
       <Footer />
-      
     </main>
   )
 }
