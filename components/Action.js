@@ -83,7 +83,9 @@ export default function Action({ words, patterns }) {
         <section className='self-center flex flex-col gap-8 justify-center items-center'>
         
             {/* 文字内容区域 */}
-            <div id="text-area" className='text-center text-5xl font-bold tracking-widest'>
+            <div id="text-area" className='text-center font-bold 
+            text-3xl tracking-wider
+            md:text-5xl md:tracking-widest'>
                 <p id="phrase">......</p>
             </div>
 

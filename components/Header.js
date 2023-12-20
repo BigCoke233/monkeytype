@@ -26,8 +26,8 @@ const font = Ubuntu({
 
 function ToggleHistory() {
     const HistoryBox = document.getElementById('history-container')
-    HistoryBox.classList.toggle('-right-96')
-    HistoryBox.classList.toggle('right-5')
+    HistoryBox.classList.toggle('-right-[100vw]')
+    HistoryBox.classList.toggle('right-0')
 }
 
 /* === 主函数 === */
