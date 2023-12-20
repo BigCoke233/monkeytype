@@ -5,7 +5,7 @@
  * @returns jex
  */
 
-const VERSION = '2.0.0'
+const VERSION = '2.0.0-Beta.20231220'
 
 export default function Footer() {
     return (
