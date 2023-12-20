@@ -15,8 +15,7 @@ import { Button, Tooltip } from '@nextui-org/react'
 import { IoShuffle } from "react-icons/io5";
 
 //核心功能
-import RandomPhrase from '@/lib/RandomPhrase'
-import RandomPattern from '@/lib/RandomPattern'
+import { RandomPattern, RandomPhrase } from '@/lib/Random';
 import KeyBind from '@/lib/KeyBind'
 import { PushToHistory, GetHistory } from '@/lib/History'
 
