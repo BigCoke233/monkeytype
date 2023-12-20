@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * 页眉
  * 
@@ -11,7 +13,7 @@ import Image from "next/image"
 
 import { Ubuntu } from 'next/font/google'
 
-import { IoSettings } from "react-icons/io5";
+import { IoSettings, IoBook } from "react-icons/io5";
 import { Button, ButtonGroup } from "@nextui-org/react";
 
 /* === 使用字体 === */
@@ -22,11 +24,17 @@ const font = Ubuntu({
     weight: '700',
 })
 
+function ToggleHistory() {
+    const HistoryBox = document.getElementById('history-container')
+    HistoryBox.classList.toggle('-right-96')
+    HistoryBox.classList.toggle('right-0')
+}
+
 /* === 主函数 === */
 
 export default function Header() {
     return (
-        <nav className="flex justify-between">
+        <nav className="flex justify-between relative z-20">
             <header className="flex items-center gap-3">
                 <Image src="/favicon.png" alt="A monkey typist." width={96} height={96}
                     className="w-8 md:w-12 drop-shadow-md" />
@@ -35,6 +43,7 @@ export default function Header() {
                 </h1>
             </header>
             <section>
+                <Button isIconOnly variant="ghost" size="lg" onClick={()=>ToggleHistory()}><IoBook /></Button>
                 <Button isIconOnly variant="light" size="lg"><IoSettings /></Button>
             </section>
         </nav>

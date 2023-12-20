@@ -8,7 +8,7 @@
 
 import { getStore } from "@/lib/utils/useLocalStorage";
 
-import { Card, CardBody, ScrollShadow, Divider } from "@nextui-org/react";
+import { Card, CardBody, ScrollShadow, Divider, Button } from "@nextui-org/react";
 import { useEffect } from "react";
 
 /* === 数据 === */
@@ -27,16 +27,19 @@ export default function History() {
     })
 
     return (
-        <aside className="absolute left-5 inset-y-0 flex justify-center items-center z-10">
-            <Card className="bg-zinc-700 h-96" radius="none">
-                <h2 className="font-semibold p-3">笔记簿</h2>
-                <Divider />
-                <ScrollShadow className="h-96">
-                    <CardBody>
-                        <div id="phrase-history" />
-                    </CardBody>
-                </ScrollShadow>
-            </Card>
-        </aside>
+        <>
+            <aside className="absolute -right-96 transition-all inset-y-0 flex justify-center items-center z-10"
+            id="history-container">
+                <Card className="bg-zinc-700 h-96 w-64" radius="none">
+                    <h2 className="font-semibold p-3">笔记簿</h2>
+                    <Divider />
+                    <ScrollShadow className="h-96">
+                        <CardBody>
+                            <div id="phrase-history" />
+                        </CardBody>
+                    </ScrollShadow>
+                </Card>
+            </aside>
+        </>
     )
 }
