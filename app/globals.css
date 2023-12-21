@@ -38,3 +38,9 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #444
 }
+
+/* === History Box === */
+
+#phrase-history > div:hover .del-btn {
+  opacity: 1!important
+}
