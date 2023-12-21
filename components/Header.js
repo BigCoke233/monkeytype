@@ -10,11 +10,12 @@
 /* === 引入 === */
 
 import Image from "next/image"
+import { OptionModal } from "./OptionModal";
 
 import { Ubuntu } from 'next/font/google'
 
-import { IoSettings, IoBook } from "react-icons/io5";
-import { Button, ButtonGroup } from "@nextui-org/react";
+import { IoBook } from "react-icons/io5";
+import { Button } from "@nextui-org/react";
 
 /* === 使用字体 === */
 
@@ -44,7 +45,7 @@ export default function Header() {
             </header>
             <section>
                 <Button isIconOnly variant="ghost" size="lg" onClick={()=>ToggleHistory()}><IoBook /></Button>
-                <Button isIconOnly variant="light" size="lg"><IoSettings /></Button>
+                <OptionModal />
             </section>
         </nav>
     )

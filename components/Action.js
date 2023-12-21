@@ -19,8 +19,14 @@ import { RandomPattern, RandomPhrase } from '@/lib/Random';
 import KeyBind from '@/lib/KeyBind'
 import { PushToHistory, GetHistory } from '@/lib/History'
 
+import { GetOptions } from '@/lib/Options';
+
 //使用钩子
 import { useEffect, useRef } from "react";
+
+/* === 数据 === */
+
+const options = GetOptions()
 
 /* === 工具函数 === */
 
@@ -94,7 +100,7 @@ export default function Action({ words, patterns }) {
                 <Button radius="full" size="lg" id="MonkeyButton"
                     onPress={() => GeneratePhrase(words, patterns)} className='outline-none'
                     startContent={<Image src="/monkey.png" width={20} height={20} alt="Monkey" />}>
-                    噫噫哦噫噫
+                    {options.buttonText}
                 </Button>
                 
                 <Tooltip content="倒转语序" placement='bottom' showArrow={true}>
