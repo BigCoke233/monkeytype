@@ -1,4 +1,4 @@
-<img style="float:right;margin-left:1rem" src='./public/favicon.png'>
+<img align="right" src='./public/favicon.png'>
 
 # Monkeytype
 
