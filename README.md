@@ -22,3 +22,12 @@
 - [ ] 更新和完善词组
 - [ ] 允许用户自定义词组格式（Patterns）
 - [ ] 接入 AI 大模型分析词组，提供更多灵感
+
+## 🖥️ 开发
+
+```
+git clone https://github.com/BigCoke233/monkeytype.git
+cd ./monkeytype
+npm install
+npm run dev
+```
